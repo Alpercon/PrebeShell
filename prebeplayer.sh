@@ -65,12 +65,12 @@ case $choice in
 		case $choice2 in
 			1)
 				clear
-				if [ -a "*.mp3" ]; then 
+				#if [ -a "*.mp3" ]; then 
 					ls -1 *.mp3
 					echo -e "\e[1;31mPresiona ENTER para ocultar la lista\e[0m"
-				else
-					echo -e "\e[1;31mAqui no hay canciones\e[0m"
-				fi		
+				#else
+					#echo -e "\e[1;31mAqui no hay canciones\e[0m"
+				#fi		
 				;;
 
 			2)
@@ -80,11 +80,11 @@ case $choice in
 				actual= pwd
 				clear
 		
-				if [ "$newRoute" != "$pwd" ]; then
-					echo -e "\e[1;32mListo!\e[0m"
-				else
-					echo -e "\e[0;31mError, no existe la carpeta o se escribio mal el directorio\e[0m"		
-				fi
+				#if [ "$newRoute" != "$pwd" ]; then
+					#echo -e "\e[1;32mListo!\e[0m"
+				#else
+					#echo -e "\e[0;31mError, no existe la carpeta o se escribio mal el directorio\e[0m"		
+				#fi
 
 				;;
 
