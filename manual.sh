@@ -60,7 +60,7 @@ elif [[ "$comando" == "prebeplayer" ]]; then
 elif [[ "$comando" == "manual" ]]; then
 		echo "Muestra breve información sobre un comando"
 elif [[ "$comando" == "dados" ]]; then
-		echo "Juego cubilete, cada usuario lanza los dados, gana quien tenga más pares"
+		echo "Juego cubilete, cada usuario lanza los dados, gana quien tenga una mejor combinacion"
 elif [[ "$comando" == "memoria" ]]; then
 		echo "Juego de memoria,se nos muestran números aleatorios y luego se nos pide introduzcamos la secuencia"
 		echo "Para introducir la secuencia debemos poner algo así: número número"
