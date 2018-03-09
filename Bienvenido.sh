@@ -33,9 +33,10 @@ while [[ "$var" != "salir" ]]; do
 	elif [[ "$var" == "arbol" ]]; then
 		bash $PWD/arbol.sh
 	##_______________________________________________
+	elif [[ "$var" == "salir" ]]; then
+                break
 	else
-		##$var
-		echo "Comando no encontrado"
+		$var
 	fi
 done
-echo -e "nVuelve Pronto"
+echo -e "\nVuelve Pronto\n"
