@@ -42,7 +42,7 @@ function revisar
 					 }
 					 if [ $usr -eq 3 ]; then
 					 		clear 
-							echo "Juego terminado"
+							pokemonthink "Juego terminado, ganador $n_usr"
 							let fin=1
 							return $fin
 					 fi
@@ -56,7 +56,7 @@ function revisar
 						fi
 					 }
 					 if [ $usr -eq 3 ]; then
-							echo "Juego terminado"
+							pokemonthink "Juego terminado, ganador $n_usr"
 							let fin=1
 							return $fin
 					 fi
@@ -71,7 +71,7 @@ function revisar
 						fi
 					 }
 					 if [ $usr -eq 3 ]; then
-							echo "Juego terminado"
+							pokemonthink "Juego terminado, ganador $n_usr"
 							let fin=1
 							return $fin
 					 fi
@@ -103,7 +103,7 @@ function revisar
 							let usr=usr+1
 					 fi
 					 if [ $usr -eq 3 ]; then
-							echo "Juego terminado"
+							pokemonthink "Juego terminado, ganador $n_usr"
 							let fin=1
 							return $fin
 					 fi
@@ -120,7 +120,7 @@ function revisar
 							let usr=usr+1
 					 fi
 					 if [ $usr -eq 3 ]; then
-							echo "Juego terminado"
+							pokemonthink "Juego terminado, ganador $n_usr"
 							let fin=1
 							return $fin
 					 fi
@@ -138,7 +138,7 @@ function revisar
 							let usr=usr+1
 					 fi
 					 if [ $usr -eq 3 ]; then
-							echo "Juego terminado"
+							pokemonthink "Juego terminado, ganador $n_usr"
 							let fin=1
 							return $fin
 					 fi
@@ -152,6 +152,7 @@ function revisar
 			esac
 
 	}
+	usr=0
 	##Diagonal
 	if [ $n_usr == "${gato1[0]}" ]; then
 			let usr=usr+1
@@ -163,7 +164,7 @@ function revisar
 			let usr=usr+1
 	fi
 	if [ $usr -eq 3 ]; then
-			echo "Juego terminado"
+			pokemonthink "Juego terminado, ganador $n_usr"
 			let fin=1
 			return $fin
 	fi
@@ -179,7 +180,7 @@ function revisar
 			let usr=usr+1
 	fi
 	if [ $usr -eq 3 ]; then
-			echo "Juego terminado"
+			pokemonthink "Juego terminado, ganador $n_usr"
 			let fin=1
 			return $fin
 	fi
@@ -321,5 +322,8 @@ function datos
 			done
 			mostrar
 	done
+	if [[ $tiros -eq 9 ]]; then
+		pokemonthink "Gato"
+	fi
 }
 datos
