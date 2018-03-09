@@ -4,7 +4,7 @@ BLUE='\033[1;34m'
 GREEN='\033[1;32m'
 WHITE='\033[1;37m'
 figlet -c "Bienvenido a la PrebeShell"
-echo "Introduce manpage para ver los comandos que se pueden utilizar y una descripcion de ellos"
+echo "Introduce manual para ver los comandos que se pueden utilizar y una descripcion de ellos"
 echo "Introduce 'salir' para salir de la Prebeshell"
 echo ""
 var=""
@@ -25,8 +25,17 @@ while [[ "$var" != "salir" ]]; do
 		bash $PWD/PrebeClock.sh
 	elif [[ "$var" == "prebeplayer" ]]; then
 		bash $PWD/prebeplayer.sh
+        ##_______________________________________________
+	elif [[ "$var" == "gato" ]]; then
+		bash $PWD/gato.sh
+	elif [[ "$var" == "manual" ]]; then
+		bash $PWD/manual.sh
+	elif [[ "$var" == "arbol" ]]; then
+		bash $PWD/arbol.sh
+	##_______________________________________________
 	else
-		$var
+		##$var
+		echo "Comando no encontrado"
 	fi
 done
 echo -e "nVuelve Pronto"
