@@ -7,17 +7,26 @@ figlet -c "Bienvenido a la PrebeShell"
 echo "Introduce manpage para ver los comandos que se pueden utilizar y una descripcion de ellos"
 echo "Introduce 'salir' para salir de la Prebeshell"
 echo ""
-var =""
+var=""
 while [[ "$var" != "salir" ]]; do
 	echo -ne "${GREEN}$USER"@"$HOSTNAME":"${BLUE}$PWD$ ${WHITE}"
 	read -e var
 	if [[ "$var" == "manpage" ]]; then
-		 echo "Aun no existe este script" #bash $PWD/manpage.sh
-		 exit 0;
-	elif [[ "$var" == "salir" ]]; then
-		echo -e "\nVuelve Pronto"
-		exit 0;
+		 echo "Aun no existe este script"
+	elif [[ "$var" == "Buscador.sh" ]]; then
+		read -p "Ingrese el Archivo a buscar " Arch
+		read -p "Ingrese el Directorio en el que desea buscarlo " Dir
+		bash $PWD/Buscador.sh $Arch $Dir
+	elif [[ "$var" == "dados" ]]; then
+		bash $PWD/dados.sh
+	elif [[ "$var" == "memoria" ]]; then
+		bash $PWD/memoria.sh
+	elif [[ "$var" == "PrebeClock" ]]; then
+		bash $PWD/PrebeClock.sh
+	elif [[ "$var" == "prebeplayer" ]]; then
+		bash $PWD/prebeplayer.sh
 	else
 		$var
 	fi
 done
+echo -e "nVuelve Pronto"
