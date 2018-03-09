@@ -19,7 +19,8 @@ while [ true ]; do	#Repetimos hasta que introduzca un usuario valido
 	if [ $? -eq 0 ]; then	#Verificamos que la operacion anterior (existencia de usuario) se haya realizado correctamente
 		echo "Usuario valido"
 		bash $PWD/Logeo.sh $Usuario $Password
-		break
+		bash $PWD/Bienvenido.sh
+		exit 0;
 	else
 		echo "Usuario invalido"
 		echo "Seleccione un usuario valido"

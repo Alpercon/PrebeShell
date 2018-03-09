@@ -12,10 +12,10 @@ PASS=$(perl -le 'print crypt("$ENV{Password}","\$$ENV{algo}\$$ENV{salt}\$")')
 
 if [ "$PASS" == "$passR" ]; then
 	echo "Password valido"
-	bash $PWD/Bienvenido.sh
+	exit 1
 	else
 		echo "Password invalido"
-		exit 1
+		exit 0
 fi
 
 
